@@ -12,5 +12,5 @@ module.exports = {
             "immenhausen-regular": ["immenhausen-regular", "sans-serif"],
         },
     },
-    plugins: [],
+    plugins: [require("daisyui")],
 }

@@ -1,4 +1,4 @@
-﻿<div class="flex flex-row sticky">
+﻿<div class="flex flex-row sticky top-0 z-20">
     <div class="m-6 flex flex-row items-center flex-grow">
         <a href="https://bdp.de">
             <img src="bundeszeichen.png" class="h-12 pr-3 object-scale-down border-r-2 border-white" />
@@ -6,11 +6,17 @@
         <p class="pl-3 font-immenhausen-regular text-bdp-yellow text-5xl select-none">Wildgänse Leer</p>
     </div>
     <div class="m-6 flex flex-row items-center">
-        <p class="pl-4 font-immenhausen-regular text-white text-3xl hover:text-bdp-yellow cursor-pointer select-none">Home</p>
-        <p class="pl-4 font-immenhausen-regular text-white text-3xl hover:text-bdp-yellow cursor-pointer select-none">Pfadfinden</p>
-        <p class="pl-4 font-immenhausen-regular text-white text-3xl hover:text-bdp-yellow cursor-pointer select-none">Der Stamm</p>
-        <p class="pl-4 font-immenhausen-regular text-white text-3xl hover:text-bdp-yellow cursor-pointer select-none">Gruppen</p>
-        <p class="pl-4 font-immenhausen-regular text-white text-3xl hover:text-bdp-yellow cursor-pointer select-none">Förderverein</p>
-        <p class="pl-4 font-immenhausen-regular text-white text-3xl hover:text-bdp-yellow cursor-pointer select-none">Padsöker</p>
+        @foreach (NavMenuItem item in _menuItems)
+        {
+            <div class="dropdown dropdown-hover">
+                <div tabindex="0" role="button" class="ml-4 font-immenhausen-regular text-white hover:text-bdp-yellow text-2xl cursor-pointer select-none btn btn-ghost">@item.TopName</div>
+                <ul tabindex="0" class="menu dropdown-content z-[1] menu p-2 shadow w-52">
+                    @foreach (string subItem in item.SubItemNames)
+                    {
+                        <li><a class="font-immenhausen-regular text-white hover:text-bdp-yellow">@subItem</a></li>
+                    }
+                </ul>
+            </div>
+        }
     </div>
 </div>
