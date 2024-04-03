@@ -2,8 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@font-face {
+    font-family: "immenhausen-regular";
+    src: url("Fonts/Immenhausen-Regular.ttf");
+}
+
+@font-face {
+    font-family: "aleo-light";
+    src: url("Fonts/Aleo-Light.ttf");
+}
+
+@layer base {
+    html {
+        font-family: "aleo-light", system-ui, sans-serif;
+    }
 }
 
 a, .btn-link {

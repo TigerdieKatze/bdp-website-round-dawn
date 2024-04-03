@@ -1,13 +1,12 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="page">
-    <div class="h-screen w-screen bg-cover bg-center" style="background-image: url('background.jpg');">
-        <div class="sidebar">
-            <NavMenu />
-        </div>
+    <div class="h-screen w-screen bg-cover bg-center" style="background-image: url('background_blurred.jpg');" />
+    <div class="h-screen w-screen absolute">
+        <NavMenu />
 
-        <main class="relative">
-            <article class="content px-4">
+        <main class="relative h-screen">
+            <article class="content px-4 h-screen">
                 @Body
             </article>
         </main>
