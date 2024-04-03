@@ -9,6 +9,7 @@ module.exports = {
             "white": "#ffffff",
         },
         fontFamily: {
+            "aleo-light": ["aleo-light", "sans-serif"],
             "immenhausen-regular": ["immenhausen-regular", "sans-serif"],
         },
     },
